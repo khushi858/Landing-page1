@@ -2675,6 +2675,106 @@
           grid-template-columns: 1fr !important;
         }
       }
+    
+      /* Updated Zolytics contact details */
+      .contact-aside .contact-trust-heading {
+        max-width: 500px;
+        font-size: clamp(25px, 2.2vw, 32px);
+        line-height: 1.22;
+        letter-spacing: -0.8px;
+      }
+      .contact-aside .contact-line {
+        align-items: center;
+        gap: 14px;
+        margin: 22px 0;
+      }
+      .contact-aside .contact-detail-icon {
+        width: 28px;
+        min-width: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 19px;
+      }
+      .contact-aside .contact-line a {
+        display: inline-block;
+        color: #aab8cd;
+        font-size: 12px;
+        text-decoration: none;
+        transition: color .2s ease;
+      }
+      .contact-aside .contact-line a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .contact-aside .whatsapp-icon img {
+        display: block;
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
+      @media (max-width: 767px) {
+        .contact-aside .contact-trust-heading {
+          font-size: 27px;
+        }
+      }
+
+    
+      /* Zoho app placement: 4 standard cards, then 2 featured cards, repeating */
+      .apps-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-auto-flow: row;
+        align-items: stretch;
+      }
+      .zoho-catalog-card {
+        grid-column: span 1;
+      }
+      .zoho-catalog-card.zoho-featured-card {
+        grid-column: span 2;
+        min-height: 245px;
+        padding: 27px 28px !important;
+        background: #eef2eb;
+        border-color: #dfe7dc;
+      }
+      .zoho-catalog-card.zoho-featured-card h3 {
+        font-size: 18px !important;
+      }
+      .zoho-catalog-card.zoho-featured-card .app-logo-wrap {
+        margin-bottom: 20px;
+      }
+      .zoho-catalog-card.zoho-featured-card:hover {
+        background: #e8eee5;
+        border-color: #c8d9c5;
+      }
+      @media (max-width: 991px) {
+        .apps-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+        .zoho-catalog-card.zoho-featured-card {
+          grid-column: span 1;
+          min-height: 220px;
+        }
+      }
+      @media (max-width: 650px) {
+        .apps-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          gap: 12px !important;
+        }
+        .zoho-catalog-card,
+        .zoho-catalog-card.zoho-featured-card {
+          grid-column: span 1;
+          padding: 17px !important;
+          min-height: 205px;
+        }
+      }
+      @media (max-width: 380px) {
+        .apps-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -2944,7 +3044,7 @@
           </p>
         </div>
         <div class="apps-grid">
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -2962,7 +3062,7 @@
             <p>Accounting and finance management</p>
             <a href="#contact">Explore Books ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3052,7 +3152,7 @@
             <p>Purchase and vendor management</p>
             <a href="#contact">Explore Procurement ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3070,7 +3170,7 @@
             <p>Connected finance operations</p>
             <a href="#contact">Explore Finance ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3160,7 +3260,7 @@
             <p>Accounting practice management</p>
             <a href="#contact">Explore Practice ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3178,7 +3278,7 @@
             <p>Team chat and collaboration</p>
             <a href="#contact">Explore Cliq ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3268,7 +3368,7 @@
             <p>Payroll processing</p>
             <a href="#contact">Explore Payroll ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3286,7 +3386,7 @@
             <p>Online payment pages</p>
             <a href="#contact">Explore Checkout ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3376,7 +3476,7 @@
             <p>Employee scheduling and time tracking</p>
             <a href="#contact">Explore Shifts ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3394,7 +3494,7 @@
             <p>Project planning and delivery</p>
             <a href="#contact">Explore Projects ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3484,7 +3584,7 @@
             <p>Cross-app workflow automation</p>
             <a href="#contact">Explore Flow ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3502,7 +3602,7 @@
             <p>Live chat and visitor engagement</p>
             <a href="#contact">Explore SalesIQ ↗</a>
           </article>
-          <article class="app-card reveal zoho-catalog-card">
+          <article class="app-card reveal zoho-catalog-card zoho-featured-card">
             <div class="app-logo-wrap">
               <img
                 class="app-logo zoho-real-logo"
@@ -3781,37 +3881,42 @@
           <div class="row g-0">
             <div class="col-lg-5">
               <aside class="contact-aside">
-                <span class="eyebrow">ZOLYTICS UAE</span>
-                <h2>Make every business process work harder.</h2>
+                <span class="eyebrow">ZOLYTICS</span>
+                <h2 class="contact-trust-heading">
+                  Your trusted Zoho Partner for Finance, Analytics, and
+                  Automation.
+                </h2>
                 <p>
-                  Discuss your current systems, integration needs and automation
-                  opportunities with our consulting team.
+                  Get expert guidance to connect your business systems,
+                  streamline financial operations and automate everyday
+                  workflows with Zoho.
                 </p>
                 <div class="contact-line">
-                  <div>⌖</div>
+                  <div class="contact-detail-icon" aria-hidden="true">✉</div>
                   <div>
-                    <b>UAE business presence</b
-                    ><span>Business Bay, Dubai, UAE</span>
+                    <b>Email us</b>
+                    <a href="mailto:info@zolytics.in">info@zolytics.in</a>
                   </div>
                 </div>
                 <div class="contact-line">
-                  <div>✉</div>
-                  <div><b>Email</b><span>hello@zolytics.in</span></div>
-                </div>
-                <div class="contact-line">
-                  <div>◷</div>
+                  <div class="contact-detail-icon" aria-hidden="true">◷</div>
                   <div>
-                    <b>Business hours</b
-                    ><span>Monday–Friday · 9:00 AM–6:00 PM GST</span>
+                    <b>Office Hours</b>
+                    <span>Mon - Fri (10 AM – 6 PM)</span>
                   </div>
                 </div>
-                <div class="contact-line">
-                  <div>◎</div>
+                <div class="contact-line whatsapp-contact">
+                  <div class="contact-detail-icon whatsapp-icon">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                      alt="WhatsApp"
+                      loading="lazy"
+                    />
+                  </div>
                   <div>
-                    <b>Serving UAE businesses</b
-                    ><span
-                      >Dubai · Abu Dhabi · Sharjah · Northern Emirates</span
-                    >
+                    <b>WhatsApp</b>
+                    <a href="https://wa.me/919073139613" target="_blank"
+                      rel="noopener noreferrer">+91 90731 39613</a>
                   </div>
                 </div>
               </aside>
